@@ -1,0 +1,8 @@
+<h1>Real Time Chat</h1>
+
+<input type="text" #message placeholder="Your message..">
+<button (click)="newMessage(message.value)">Send message</button>
+
+<div *ngFor="let message of messages | async" class="alert alert-warning">
+    {{ message.$value}}
+</div>
